@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <!-- The page's head. This includes the title tag. This includes the meta data. This includes a link to the css style sheet.-->
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Link to Bootstrap style sheet -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <title>About me</title>
+    </head>
+    <!-- The start of the body-->
+    <body>
+        <!--Adding a navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <!--Need the changed the href in the line below!-->
+            <a class="navbar-brand"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <!--Implementing a collapse feature to the drop down menu.-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="{% url 'home' %}" class="nav-link">home</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="{% url 'about' %}" class="nav-link">about</a>
+                </li>
+                <li class="nav-item active">
+
+                    <a href="{% url 'blog' %}" class="nav-link">blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>    
+        <div class="bg-danger clearfix">
+            <!--A card that represents prime beef.-->
+            <div class="row">
+                <link rel="stylesheet" type="text/css" href="css/my_style.css">
+                    <div class="containter text-center">
+                        <h1>About me</h1>
+                        <br>
+                        <br>
+
+                        
+                        
+                    </div>
+                    <div class="bg-danger clearfix">
+                        <br><br>
+                        {% for project in projects %}
+
+                        {{ project.title }}
+                        <p>{{ project.desciption }}</p>
+                        <img src=" {{ project.image.url }} " height=500 width=400>
+                        {{ project.image.url}}
+                        <!-- <a href="{{ project.url }}">Link</a> -->
+                        {% endfor %}
+        
+                        <br><br>
+                        <!--A card that represents prime beef.-->
+                        <div class="row">
+                            <link rel="stylesheet" type="text/css" href="css/my_style.css">
+                                <div class="containter text-center">
+                                    <table>
+                                        <tr>
+                                            <td><strong>Name:</strong></td>
+                                            <td>
+                                                Matthew Ivezaj.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Degree's Earned:</strong></td>
+                                            <td>
+                                            <ul>
+                                                <li>Bachelor of Science in Information Technology</li>
+                                                <li>Master of Science in Information Technology (In Progress)</li>
+                                            </ul>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>Hobbies:</strong>
+                                            </td>
+                                            <td>
+                                                <ul><li>Programming</li> <li>tinkering with technology</li><li>school</li><li>working out</li></ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        </table>
+                                    
+                                    
+                                </div>
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        </div>
+    </body>
+</div>
+</html>
+
+
+<br>
+<br>

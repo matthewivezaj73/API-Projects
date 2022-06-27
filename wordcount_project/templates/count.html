@@ -1,0 +1,18 @@
+<!-- Counting the number of words in
+your text and displaying them in the header.-->
+<h1>There are {{ count }} words in your text.</h1>
+<a href="{% url 'home' %}">Start Again</a>
+<!-- Sub header text -->
+<h1>Your Text:</h1>
+<!-- Accessing items inside of the python dictionary.-->
+{{ fulltext}}
+<!-- Displaying the word count. -->
+<h1>Word Count:</h1>
+<!-- Creating a for loop. -->
+{% for word, counttotal in sortedwords %}
+<!--Displaying the dictionary.-->
+{{ word }} - {{ counttotal }}
+<!-- Adding a page break. -->
+<br />
+<!-- End of the for loop. -->
+{% endfor %}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <!-- The page's head. This includes the title tag. This includes the meta data. This includes a link to the css style sheet.-->
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Link to Bootstrap style sheet -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <title>Blog</title>
+    </head>
+    <!-- The start of the body-->
+    <body>
+        <!--Adding a navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <!--Need the changed the href in the line below!-->
+            <a class="navbar-brand"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <!--Implementing a collapse feature to the drop down menu.-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="{% url 'home' %}" class="nav-link">home</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="{% url 'about' %}" class="nav-link">about</a>
+                </li>
+                <li class="nav-item active">
+
+                    <a href="{% url 'blog' %}" class="nav-link">blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>    
+        <div class="bg-danger clearfix">
+            <!--A card that represents prime beef.-->
+            <div class="row">
+                <link rel="stylesheet" type="text/css" href="css/my_style.css">
+
+                        <!--A card that represents prime beef.-->
+                        <div class="row">
+                            <link rel="stylesheet" type="text/css" href="css/my_style.css">
+                                <div class="containter text-center">
+                                    <div>
+                                        <p>
+                                            I am an ardent student of technology and intelligence practices.<br>My
+                                            forte lies in the quickness I have to comprehend new material and
+                                            <br>deliver stakeholder vision through technological and analytic means. 
+                                            I have robust communication and follow a set of stringent
+                                            ethical guidelines. <br><br>Proficient in cryptology, operating systems,
+                                            programming, general use applications, servers, computer
+                                            networking, mathematics, and cyber security practices.<br>
+                                            Participated in a year-long internship with the <br>Department of
+                                            Homeland Security as of May 2020 until August 2021 as a student
+                                            trainee (intelligence) in a Cyber Threat Analyst role. 
+                                            <br><br>As of June, 2021, I have graduated from Walsh College with a
+                                            Bachelor of Science in Information Technology with a concentration
+                                            in Business Information Systems.<br>
+                                            I am now pursuing a Master of Science in Information Technology
+                                            with a concentration in Data Science.
+                                            <br><br>Projects that I have completed in my personal and academic
+                                            <h3>Some of my projects are as follows:</h3>
+                                            <br>
+                                            ________________________________________________________________________________________________________
+                                            <br>
+
+                                            - Creating a GNU Linux operating system from scratch.<br>
+                                            - Developing several database servers in python to store information on party invites, favorite music, employee data, website registration.<br>
+                                            - Developed a remote sensing application in python utilizing the psutil, socket, sys, argparse, and click libraries.<br>
+                                            - Developing a password generator with Django which utilized bootstrap and HTML code.<br>
+                                            - Creating company websites in HTML, CSS, JavaScript, jQuery, PHP, C#, and bootstrap. They included a catalog for shoppers to purchase items,<br> allow users to make inquiries, allow users to view Page 1 of 4 company employees, and a back-end server that displayed an area to handle user requests.<br>
+                                            - Creating employee entry systems in python to validate and create a list of employee data.<br>This list was put into a dictionary and manipulated through the CLI interface displayed to the user.<br>
+                                            - Creating basic websites in HTML with embedded JavaScript to display company content. A basic HTML page that displayed information about a company.<br>This included things sold by the company, employee contact information, an about page, and homepage.<br>
+                                            - Creating customer data management systems in python and MySQL to gather, process, and save company data on a database server.<br>
+                                            - Writing several analytic research papers and publishing them on Tumblr.<br>
+                                            - Developed a calculator that converts Celsius to Fahrenheit and Celsius to Kelvin in python using the NumPy library.<br>
+                                            - Developing a personal portfolio with HTML and python, using the Django framework.<br>
+                                            <br>
+                                            <br>
+
+    
+                                        </p>
+                                        </div>
+                                        
+                                    {% for project in projects %}
+    
+                                    {{ project.title }}
+                                    <p>{{ project.desciption }}</p>
+                                    <img src=" {{ project.image.url }} " height=500 width=400>
+                                    {{ project.image.url}}
+                                    <br><br>
+                                    <br>
+                                    
+                                    {% if project.url %}
+                                    
+                                    {% endif %}
+                    
+                                    {% endfor %} 
+                                </div>
+
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        </div>
+    </body>
+</div>
+</html>
+
+
+<br>
+<br>
+
+
