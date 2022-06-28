@@ -5,3 +5,4 @@ __pycache__/
 *.pot
 local_settings.py
 /media
+db.sqlite3
