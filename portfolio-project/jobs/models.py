@@ -7,3 +7,4 @@ class Job(models.Model):
         
         Attributes: Image and Summary.
     """
+    image = models.ImageField(upload_to='')
