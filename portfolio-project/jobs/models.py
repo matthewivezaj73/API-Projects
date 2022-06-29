@@ -10,3 +10,4 @@ class Job(models.Model):
     #Assigning a place for the user to upload an image to a variable.
     image = models.ImageField(upload_to='')
     #Assigning a summary to a variable.
+    summary = models.CharField()
