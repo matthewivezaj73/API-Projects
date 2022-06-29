@@ -121,3 +121,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 #Going to where out projects base directory is with a media folder on top of it.
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#specifying where to access an image.
