@@ -8,4 +8,5 @@ class Job(models.Model):
     """
     #Accepting an image that the user can upload.
     image = models.ImageField(upload_to='')
+    #Creating a charfield.
     summary = models.CharField(max_length=200)
