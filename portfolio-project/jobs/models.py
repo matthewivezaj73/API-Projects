@@ -7,4 +7,5 @@ class Job(models.Model):
         
         Attributes: Image and Summary.
     """
+    #Assigning a place for the user to upload an image to a variable.
     image = models.ImageField(upload_to='')
