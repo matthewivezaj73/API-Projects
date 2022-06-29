@@ -123,3 +123,4 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #specifying where to access an image.
+MEDIA_URL = '/media/
