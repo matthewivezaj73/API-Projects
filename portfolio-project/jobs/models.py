@@ -1,4 +1,5 @@
 from django.db import models
+from .models import ImageField
 
 class Job(models.Model):
     """
